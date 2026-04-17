@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veelgestelde vragen — BundleVue</title>
+<meta name="description" content="Veelgestelde vragen over BundleVue — de app voor het beheren van gedeelde mobiele databundels met je gezin of groep.">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://bundlevue.app/nl/faq/">
+<link rel="alternate" hreflang="en" href="https://bundlevue.app/faq/">
+<link rel="alternate" hreflang="nl" href="https://bundlevue.app/nl/faq/">
+<meta property="og:title" content="Veelgestelde vragen — BundleVue">
+<meta property="og:description" content="Veelgestelde vragen over BundleVue — de app voor het beheren van gedeelde mobiele databundels.">
+<meta property="og:url" content="https://bundlevue.app/nl/faq/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0D1F3C; --blue: #1A3F6F; --teal: #00C9A7;
+    --white: #FFFFFF; --w60: rgba(255,255,255,0.6);
+    --w20: rgba(255,255,255,0.12); --w08: rgba(255,255,255,0.06);
+  }
+  html, body { min-height: 100vh; background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; overflow-x: hidden; scrollbar-gutter: stable; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(var(--w08) 1px, transparent 1px), linear-gradient(90deg, var(--w08) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; z-index: 0; }
+  body::after { content: ''; position: fixed; top: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 400px; background: radial-gradient(ellipse, rgba(0,201,167,0.12) 0%, transparent 70%); pointer-events: none; z-index: 0; }
+  .wrap { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; padding: 80px 24px 60px; display: flex; flex-direction: column; align-items: center; }
+  .back-link { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 500; margin-bottom: 40px; transition: opacity 0.2s; }
+  .back-link:hover { opacity: 0.7; }
+  .page-title { font-family: 'DM Mono', monospace; font-size: clamp(32px,6vw,48px); font-weight: 500; letter-spacing: -0.02em; margin-bottom: 12px; text-align: center; animation: fadeUp 0.6s ease both; }
+  .page-title span { color: var(--teal); }
+  .page-subtitle { font-size: 16px; font-weight: 300; color: var(--w60); text-align: center; margin-bottom: 48px; animation: fadeUp 0.6s 0.1s ease both; }
+  .faq-list { width: 100%; display: flex; flex-direction: column; gap: 16px; }
+  .faq-item { background: var(--w08); border: 1px solid var(--w20); border-radius: 16px; overflow: hidden; animation: fadeUp 0.6s ease both; }
+  .faq-item:nth-child(1) { animation-delay: 0.15s; }
+  .faq-item:nth-child(2) { animation-delay: 0.2s; }
+  .faq-item:nth-child(3) { animation-delay: 0.25s; }
+  .faq-item:nth-child(4) { animation-delay: 0.3s; }
+  .faq-item:nth-child(5) { animation-delay: 0.35s; }
+  .faq-item:nth-child(6) { animation-delay: 0.4s; }
+  .faq-item:nth-child(7) { animation-delay: 0.45s; }
+  .faq-item:nth-child(8) { animation-delay: 0.5s; }
+  .faq-q { padding: 20px 24px; font-size: 16px; font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; user-select: none; transition: color 0.2s; }
+  .faq-q:hover { color: var(--teal); }
+  .faq-chevron { width: 20px; height: 20px; flex-shrink: 0; fill: var(--w60); transition: transform 0.3s; }
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+  .faq-item.open .faq-a { max-height: 400px; }
+  .faq-a-inner { padding: 0 24px 20px; font-size: 15px; font-weight: 300; color: var(--w60); line-height: 1.7; }
+  .footer { margin-top: 80px; text-align: center; width: 100%; }
+  .footer p { font-size: 12px; color: rgba(255,255,255,0.2); margin-bottom: 0; line-height: 1.6; }
+  .footer p + p { margin-top: 6px; }
+  .footer a { color: rgba(255,255,255,0.35); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.15); transition: color 0.2s; }
+  .footer a:hover { color: var(--teal); border-color: var(--teal); }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)} }
+  .lang-switch { position: fixed; top: 20px; right: 20px; z-index: 100; display: flex; gap: 2px; background: var(--w08); border: 1px solid var(--w20); border-radius: 100px; padding: 4px; }
+  .lang-btn { padding: 5px 14px; border-radius: 100px; font-size: 12px; font-weight: 500; text-decoration: none; border: none; transition: all 0.2s; color: rgba(255,255,255,0.45); letter-spacing: 0.04em; }
+  .lang-btn.active { background: var(--teal); color: var(--navy); }
+  .lang-btn:not(.active):hover { color: rgba(255,255,255,0.8); }
+</style>
+</head>
+<body>
+<div class="lang-switch"><a href="/faq/" class="lang-btn">EN</a><span class="lang-btn active">NL</span></div>
+<div class="wrap">
+  <a href="/nl/" class="back-link">&larr; Terug naar home</a>
+  <h1 class="page-title">Veelgestelde <span>vragen</span></h1>
+  <p class="page-subtitle">Alles wat je wilt weten over BundleVue.</p>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        Wat is BundleVue?
+        <svg class="faq-chevron" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">BundleVue is een mobiele app waarmee je je dataverbruik bijhoudt — zowel voor je persoonlijke bundel als voor gedeelde groepsbundels. Zie in real-time hoeveel data jij en je gezinsleden hebben verbruikt.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        Op welke platformen is BundleVue beschikbaar?
+        <svg class="faq-chevron" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">BundleVue is beschikbaar voor zowel iOS (iPhone) als Android. Je kunt platformen mixen binnen een groep — bijvoorbeeld de een op iPhone en de ander op Android.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        Hoe meet BundleVue mijn dataverbruik?
+        <svg class="faq-chevron" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">BundleVue leest de ingebouwde datatellers van je toestel. Het onderschept geen verkeer en gebruikt geen VPN. Dit betekent dat het werkt bij elke provider — geen configuratie of inloggen bij je provider nodig.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        Wat zijn groepsbundels?
+        <svg class="faq-chevron" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Veel mobiele abonnementen delen een data-tegoed over meerdere simkaarten. Met BundleVue maak je een groep aan die deze gedeelde bundel spiegelt. Elk lid ziet zijn eigen verbruik en het groepstotaal — zo weet je altijd wie hoeveel gebruikt.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        Is BundleVue gratis?
+        <svg class="faq-chevron" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Persoonlijk verbruik bijhouden is gratis. Groepsbundels en geavanceerde functies zoals groepsmeldingen vereisen BundleVue Premium — beschikbaar als maandelijks, jaarlijks of levenslang abonnement.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        Is mijn data veilig?
+        <svg class="faq-chevron" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Ja. BundleVue meet alleen hoeveel data je toestel verbruikt — het kan niet zien wat je bezoekt of welke apps je gebruikt. Clouddata wordt veilig opgeslagen in de EU. Je kunt al je clouddata op elk moment verwijderen vanuit de app.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        Kan ik BundleVue zonder account gebruiken?
+        <svg class="faq-chevron" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Ja. Je kunt je persoonlijke dataverbruik bijhouden zonder in te loggen. Een account is alleen nodig voor cloud-synchronisatie en groepsfuncties. Je kunt inloggen met je Apple- of Google-account.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        Werkt BundleVue bij elke provider?
+        <svg class="faq-chevron" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Ja. BundleVue is volledig provider-onafhankelijk. Het werkt met elke mobiele aanbieder — geen provider-login, API of speciale configuratie nodig.</div></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2026 BundleVue &middot; MJ Consultancy B.V.</p>
+    <p class="footer-links"><a href="/nl/">Home</a> &middot; <a href="/nl/faq/">FAQ</a> &middot; <a href="/nl/privacy/">Privacybeleid</a> &middot; <a href="/nl/voorwaarden/">Gebruiksvoorwaarden</a> &middot; <a href="/nl/privacy/keuzes/">Privacykeuzes</a></p>
+  </footer>
+</div>
+</body>
+</html>

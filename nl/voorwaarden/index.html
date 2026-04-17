@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gebruiksvoorwaarden — BundleVue</title>
+<meta name="description" content="Gebruiksvoorwaarden (End User License Agreement) voor de BundleVue-app op Android en iOS.">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://bundlevue.app/nl/voorwaarden/">
+<link rel="alternate" hreflang="nl" href="https://bundlevue.app/nl/voorwaarden/">
+<link rel="alternate" hreflang="en" href="https://bundlevue.app/terms/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0D1F3C; --blue: #1A3F6F; --teal: #00C9A7;
+    --white: #FFFFFF; --w60: rgba(255,255,255,0.6);
+    --w20: rgba(255,255,255,0.12); --w08: rgba(255,255,255,0.06);
+  }
+  html, body { min-height: 100vh; background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; overflow-x: hidden; scrollbar-gutter: stable; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(var(--w08) 1px, transparent 1px), linear-gradient(90deg, var(--w08) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; z-index: 0; }
+  body::after { content: ''; position: fixed; top: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 400px; background: radial-gradient(ellipse, rgba(0,201,167,0.12) 0%, transparent 70%); pointer-events: none; z-index: 0; }
+  .wrap { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; padding: 80px 24px 80px; display: flex; flex-direction: column; align-items: center; }
+  .back { display: inline-flex; align-items: center; gap: 8px; color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 500; margin-bottom: 48px; opacity: 0.8; transition: opacity 0.2s; }
+  .back:hover { opacity: 1; }
+  .wordmark { font-family: 'DM Mono', monospace; font-size: 22px; font-weight: 500; letter-spacing: -0.02em; color: var(--white); margin-bottom: 8px; }
+  .wordmark span { color: var(--teal); }
+  h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 500; margin-bottom: 8px; }
+  .updated { font-size: 13px; color: var(--w60); margin-bottom: 48px; }
+  .divider { width: 100%; height: 1px; background: var(--w20); margin-bottom: 40px; }
+  h2 { font-size: 18px; font-weight: 500; color: var(--white); margin-bottom: 12px; margin-top: 40px; }
+  h2:first-of-type { margin-top: 0; }
+  h3 { font-size: 16px; font-weight: 500; color: var(--white); margin-bottom: 8px; margin-top: 24px; }
+  p { font-size: 15px; font-weight: 300; color: var(--w60); line-height: 1.75; margin-bottom: 16px; }
+  ul { padding-left: 20px; margin-bottom: 16px; }
+  li { font-size: 15px; font-weight: 300; color: var(--w60); line-height: 1.75; margin-bottom: 6px; }
+  a { color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(0,201,167,0.3); transition: border-color 0.2s; }
+  a:hover { border-color: var(--teal); }
+  strong { color: var(--white); }
+  .highlight { background: var(--w08); border: 1px solid var(--w20); border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .highlight p { margin-bottom: 0; }
+  .footer { margin-top: 80px; text-align: center; width: 100%; }
+  .footer p { font-size: 12px; color: rgba(255,255,255,0.2); margin-bottom: 0; line-height: 1.6; }
+  .footer p + p { margin-top: 6px; }
+  .footer a { color: rgba(255,255,255,0.35); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.15); transition: color 0.2s; }
+  .footer a:hover { color: var(--teal); border-color: var(--teal); }
+  .lang-switch { position: fixed; top: 20px; right: 20px; z-index: 100; display: flex; gap: 2px; background: var(--w08); border: 1px solid var(--w20); border-radius: 100px; padding: 4px; }
+  .lang-btn { padding: 5px 14px; border-radius: 100px; font-size: 12px; font-weight: 500; text-decoration: none; border: none; transition: all 0.2s; color: rgba(255,255,255,0.45); letter-spacing: 0.04em; }
+  .lang-btn.active { background: var(--teal); color: var(--navy); }
+  .lang-btn:not(.active):hover { color: rgba(255,255,255,0.8); }
+</style>
+</head>
+<body>
+<nav class="lang-switch">
+  <a href="/terms/" class="lang-btn">EN</a>
+  <a href="/nl/voorwaarden/" class="lang-btn active">NL</a>
+</nav>
+<div class="wrap">
+  <a href="/nl/" class="back">&larr; Terug naar BundleVue</a>
+  <div class="wordmark">Bundle<span>Vue</span></div>
+  <h1>Gebruiksvoorwaarden</h1>
+  <p class="updated">Laatst bijgewerkt: 12 april 2026</p>
+  <div class="divider"></div>
+
+  <div class="highlight">
+    <p><strong>Voor iOS- en Apple Watch-gebruikers:</strong> deze voorwaarden zijn niet op u van toepassing. Op de BundleVue iOS-app geldt uitsluitend <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple's Standard End User License Agreement</a>. Raadpleeg dat document voor uw overeenkomst met ons.</p>
+    <p style="margin-top:12px"><strong>Voor Android-gebruikers en websitebezoekers:</strong> deze gebruiksvoorwaarden vormen een End User License Agreement (EULA) tussen u en MJ Consultancy B.V. Door de BundleVue Android-app te downloaden, te installeren of te gebruiken — of door de website bundlevue.app te gebruiken — gaat u akkoord met deze voorwaarden. Indien u niet akkoord gaat, dient u de app of de website niet te gebruiken.</p>
+  </div>
+
+  <h2>1. Partijen en reikwijdte</h2>
+  <p>Deze EULA wordt gesloten tussen <strong>u</strong> (de eindgebruiker) en <strong>MJ Consultancy B.V.</strong>, Paganiniplantsoen 14, 2151 GH Nieuw-Vennep, Nederland (KvK: 28106352), hierna "wij", "ons" of "MJ Consultancy". Contact: <a href="mailto:hello@bundlevue.app">hello@bundlevue.app</a>.</p>
+  <p>Deze voorwaarden zijn van toepassing op de <strong>BundleVue Android-app</strong> en op uw gebruik van de <strong>website bundlevue.app</strong> (gezamenlijk de "App" in deze voorwaarden). Deze voorwaarden zijn <strong>niet</strong> van toepassing op de BundleVue iOS-app of de Apple Watch-begeleidingsapp, waarop uitsluitend <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple's Standard End User License Agreement</a> van toepassing is.</p>
+
+  <h2>2. Licentieverlening</h2>
+  <p>Wij verlenen u een <strong>beperkte, niet-exclusieve, niet-overdraagbare, herroepelijke licentie</strong> om de BundleVue Android-app te installeren en te gebruiken op Android-apparaten die u bezit of beheert, uitsluitend voor persoonlijk, niet-commercieel gebruik. Deze licentie geeft u niet het recht om:</p>
+  <ul>
+    <li>Delen van de App te kopiëren, wijzigen, verspreiden, verkopen of verhuren</li>
+    <li>De App te reverse-engineeren, decompileren of disassembleren, behoudens voor zover toegestaan onder dwingend recht</li>
+    <li>Eigendomskennisgevingen te verwijderen, wijzigen of verbergen</li>
+    <li>De App of uw account aan een ander over te dragen</li>
+    <li>De App te gebruiken in strijd met toepasselijke wet- of regelgeving</li>
+  </ul>
+  <p>De App wordt aan u in licentie gegeven, niet verkocht. Wij en onze licentiegevers behouden alle rechten die niet uitdrukkelijk zijn verleend.</p>
+
+  <h2>3. Abonnementen en aankopen</h2>
+  <p>BundleVue biedt gratis functies en optionele betaalde abonnementen ("Premium"). Premium-abonnementen voor de Android-app worden verkocht via de <strong>Google Play Store</strong>. Betalingen worden volledig door Google verwerkt. Wij hebben geen toegang tot uw betaalgegevens. Facturering, verlenging en opzegging van abonnementen volgen de standaardregels van Google Play:</p>
+  <ul>
+    <li>Abonnementen met automatische verlenging worden automatisch verlengd aan het einde van elke factuurperiode, tenzij ten minste 24 uur vóór verlenging opgezegd</li>
+    <li>U kunt op elk moment opzeggen via uw Google Play-accountinstellingen</li>
+    <li>Eenmalige aankopen ("Levenslang") bieden toegang zolang de App beschikbaar blijft</li>
+  </ul>
+  <p>Verzoeken om restitutie vallen onder het restitutiebeleid van Google Play. Wij verwerken restituties niet rechtstreeks.</p>
+
+  <h2>4. Aanvaardbaar gebruik</h2>
+  <p>U stemt ermee in de App uitsluitend te gebruiken voor rechtmatige doeleinden en in overeenstemming met deze voorwaarden. U zult niet:</p>
+  <ul>
+    <li>De App gebruiken in strijd met wet- of regelgeving of met rechten van derden</li>
+    <li>Proberen onbevoegde toegang te verkrijgen tot onze systemen, servers of accounts van andere gebruikers</li>
+    <li>De werking van de App of verbonden netwerken verstoren of belemmeren</li>
+    <li>De groepsfunctie gebruiken voor spam, intimidatie, fraude of ander misbruik</li>
+    <li>Nepaccounts aanmaken of accounts met anderen delen</li>
+    <li>Geautomatiseerde systemen (bots, scrapers) gebruiken om de App te benaderen</li>
+  </ul>
+  <p>Wij behouden ons het recht voor accounts op te schorten of te beëindigen die deze voorwaarden schenden, indien nodig zonder voorafgaande kennisgeving om de dienst of andere gebruikers te beschermen.</p>
+
+  <h2>5. Nauwkeurigheid van metingen</h2>
+  <p>BundleVue meet mobiel en Wi-Fi-dataverbruik via netwerkinterfaces op systeemniveau die door Android worden geleverd. Deze metingen <strong>kunnen afwijken van het verbruik zoals gerapporteerd door uw mobiele provider</strong>, vanwege hoe besturingssystemen dataverbruik tellen, roamingregels, compressie aan de providerzijde en andere technische factoren.</p>
+  <p>De App wordt aangeboden als informatief hulpmiddel. <strong>Deze mag niet worden gebruikt als enige basis voor geschillen met uw mobiele provider</strong>, voor juridische vorderingen of voor enige commerciële facturatiebeslissing. Raadpleeg altijd de officiële factuurgegevens van uw provider voor gezaghebbende data.</p>
+
+  <h2>6. Intellectueel eigendom</h2>
+  <p>Alle inhoud, ontwerp, broncode, handelsmerken en andere intellectuele eigendomsrechten in de App en op de website bundlevue.app zijn eigendom van MJ Consultancy B.V. of onze licentiegevers en worden beschermd door Nederlandse en internationale wetgeving inzake auteursrecht, handelsmerken en andere rechten.</p>
+  <p>U mag geen enkel deel van de App reproduceren, verspreiden, openbaar tonen, afgeleide werken creëren of anderszins exploiteren zonder onze voorafgaande schriftelijke toestemming, behalve voor zover uitdrukkelijk toegestaan door deze voorwaarden of door dwingend recht.</p>
+  <p>U behoudt het eigendom van de gegevens die u in de App creëert (bijv. groepsconfiguraties, verbruiksrecords). Door de App te gebruiken, verleent u ons een beperkte licentie om deze gegevens uitsluitend te verwerken ter levering van de dienst zoals beschreven in ons <a href="/nl/privacy/">Privacybeleid</a>.</p>
+
+  <h2>7. Diensten van derden en derde-begunstigden</h2>
+  <p>De App maakt gebruik van diensten van derden, waaronder Google, Supabase, RevenueCat en TelemetryDeck. Door de App te gebruiken, gaat u ermee akkoord de toepasselijke voorwaarden van deze derden na te leven waar zij op u van toepassing zijn (bijv. Google Play Servicevoorwaarden voor Android-aankopen).</p>
+  <p><strong>Google is een derde-begunstigde van deze EULA</strong> met betrekking tot het gebruik van de App op Android-apparaten en heeft het recht de voorwaarden van deze EULA als derde-begunstigde tegen u af te dwingen.</p>
+
+  <h2>8. Beschikbaarheid en wijzigingen</h2>
+  <p>Wij streven ernaar de App beschikbaar en functioneel te houden, maar garanderen geen ononderbroken of foutvrije werking. Wij kunnen van tijd tot tijd:</p>
+  <ul>
+    <li>De App updaten met nieuwe functies, bugfixes of beveiligingspatches</li>
+    <li>Functies wijzigen of stopzetten, met een redelijke aankondiging waar mogelijk</li>
+    <li>Geplande onderhoudswerkzaamheden uitvoeren die de beschikbaarheid tijdelijk beperken</li>
+    <li>De dienst opschorten bij beveiligingsincidenten of overmacht</li>
+  </ul>
+  <p>Wij zijn niet aansprakelijk voor verliezen als gevolg van tijdelijke onbeschikbaarheid of wijzigingen in functionaliteit.</p>
+
+  <h2>9. Uitsluiting van garanties</h2>
+  <p><strong>De App wordt geleverd "as is" en "as available", zonder garanties van welke aard dan ook</strong>, uitdrukkelijk noch stilzwijgend, voor zover maximaal toegestaan door de wet. Wij sluiten uitdrukkelijk alle garanties uit met betrekking tot verkoopbaarheid, geschiktheid voor een bepaald doel, niet-inbreuk, nauwkeurigheid en ononderbroken beschikbaarheid.</p>
+  <p>Wij garanderen niet dat de App aan uw eisen voldoet, dat metingen byte-nauwkeurig zijn, dat de dienst foutvrij is, of dat eventuele gebreken zullen worden verholpen. U gebruikt de App op eigen risico.</p>
+  <p>Deze uitsluiting doet geen afbreuk aan dwingende consumentenrechten die op grond van toepasselijk recht niet kunnen worden uitgesloten of beperkt.</p>
+
+  <h2>10. Beperking van aansprakelijkheid</h2>
+  <p>Voor zover maximaal toegestaan door de wet, zijn MJ Consultancy B.V., haar bestuurders, werknemers en gelieerde ondernemingen <strong>niet aansprakelijk voor enige indirecte, incidentele, bijzondere, gevolg- of punitieve schade</strong>, met inbegrip van maar niet beperkt tot gederfde winst, gegevensverlies, verlies van goodwill, serviceonderbreking, bedrijfsonderbreking of schade aan uw apparaat of mobiel abonnement, voortvloeiend uit of verband houdend met uw gebruik van de App, ook indien wij op de hoogte zijn gesteld van de mogelijkheid van dergelijke schade.</p>
+  <p>Onze totale aansprakelijkheid voor directe schade voortvloeiend uit of verband houdend met de App is in geen geval hoger dan het hoogste van (a) het bedrag dat u ons voor de App heeft betaald in de twaalf (12) maanden voorafgaand aan de gebeurtenis die aanleiding gaf tot de vordering, of (b) vijftig euro (EUR 50).</p>
+  <p>Niets in deze voorwaarden sluit onze aansprakelijkheid uit of beperkt deze voor: (i) overlijden of persoonlijk letsel veroorzaakt door onze nalatigheid, (ii) fraude of bedrieglijke verklaring, (iii) grove schuld of opzet, of (iv) enige aansprakelijkheid die niet kan worden uitgesloten of beperkt onder dwingend Nederlands consumentenrecht.</p>
+
+  <h2>11. Vrijwaring</h2>
+  <p>U stemt ermee in MJ Consultancy B.V. en haar gelieerde ondernemingen te vrijwaren en schadeloos te stellen voor alle vorderingen, schade, verliezen, aansprakelijkheden en kosten (inclusief redelijke advocaatkosten) voortvloeiend uit: (a) uw schending van deze voorwaarden, (b) uw misbruik van de App, of (c) uw schending van wet- of regelgeving of rechten van derden.</p>
+
+  <h2>12. Productaansprakelijkheid en regelgeving</h2>
+  <p>U erkent dat eventuele productaansprakelijkheidsvorderingen, vorderingen dat de App niet voldoet aan toepasselijke wettelijke of regelgevende vereisten, en vorderingen op grond van consumentenbescherming, privacy of soortgelijke wetgeving, de verantwoordelijkheid zijn van MJ Consultancy B.V. — niet van Google. Google heeft geen enkele verplichting om onderhoud of support te leveren met betrekking tot de App.</p>
+
+  <h2>13. Naleving van wet- en regelgeving</h2>
+  <p>U verklaart en garandeert dat:</p>
+  <ul>
+    <li>U zich niet bevindt in een land dat onderworpen is aan een embargo van de Amerikaanse overheid, of dat door de Amerikaanse overheid is aangeduid als "terrorisme-ondersteunend" land</li>
+    <li>U niet vermeld staat op enige lijst van de Amerikaanse overheid van verboden of beperkte partijen</li>
+    <li>U de App niet gebruikt voor doeleinden die verboden zijn door toepasselijke exportcontrolewetten</li>
+  </ul>
+
+  <h2>14. Beëindiging</h2>
+  <p>U kunt het gebruik van de App op elk moment staken en uw account verwijderen via <strong>Instellingen → Account verwijderen</strong> binnen de App.</p>
+  <p>Wij kunnen uw toegang opschorten of beëindigen indien u deze voorwaarden wezenlijk schendt, indien vereist door de wet, of om de dienst of andere gebruikers te beschermen. Na beëindiging eindigt uw recht om de App te gebruiken onmiddellijk. Hoofdstukken 6 (Intellectueel eigendom), 9 (Uitsluiting van garanties), 10 (Aansprakelijkheid), 11 (Vrijwaring) en 15 (Toepasselijk recht) blijven na beëindiging van kracht.</p>
+
+  <h2>15. Toepasselijk recht en bevoegde rechter</h2>
+  <p>Op deze voorwaarden is het recht van <strong>Nederland</strong> van toepassing, met uitsluiting van de bepalingen van het internationaal privaatrecht. Elk geschil voortvloeiend uit of verband houdend met deze voorwaarden of de App zal worden voorgelegd aan de exclusieve bevoegdheid van de bevoegde rechter te <strong>Amsterdam, Nederland</strong>, onverminderd dwingende consumentenrechten die u het recht geven om procedures te voeren bij rechtbanken in uw woonplaats binnen de Europese Unie.</p>
+  <p>Niets in deze bepaling belet u klachten in te dienen bij consumentenbeschermingsautoriteiten of gebruik te maken van beschikbare online geschillenbeslechtingsmechanismen.</p>
+
+  <h2>16. Wijzigingen van deze voorwaarden</h2>
+  <p>Wij kunnen deze voorwaarden van tijd tot tijd bijwerken. Bij wezenlijke wijzigingen zullen wij de datum bij "Laatst bijgewerkt" bovenaan deze pagina aanpassen en, waar gepast, u via de App op de hoogte stellen. Voortgezet gebruik van de App nadat wijzigingen van kracht zijn geworden, geldt als aanvaarding van de bijgewerkte voorwaarden. Indien u de bijgewerkte voorwaarden niet accepteert, dient u het gebruik van de App te staken.</p>
+
+  <h2>17. Deelbaarheid en volledige overeenkomst</h2>
+  <p>Indien enige bepaling van deze voorwaarden niet-afdwingbaar wordt bevonden, blijven de overige bepalingen onverminderd van kracht. Deze voorwaarden, samen met ons <a href="/nl/privacy/">Privacybeleid</a> en <a href="/nl/cookiebeleid/">Cookiebeleid</a>, vormen de volledige overeenkomst tussen u en ons met betrekking tot de App en vervangen alle eerdere overeenkomsten.</p>
+
+  <h2>18. Contact</h2>
+  <p>Vragen over deze voorwaarden? Neem contact met ons op:</p>
+  <p><strong>MJ Consultancy B.V.</strong><br>Paganiniplantsoen 14<br>2151 GH Nieuw-Vennep<br>Nederland<br>E-mail: <a href="mailto:hello@bundlevue.app">hello@bundlevue.app</a></p>
+
+  <div class="footer">
+    <p><a href="/nl/">Home</a> &nbsp;/&nbsp; <a href="/nl/privacy/">Privacybeleid</a> &nbsp;/&nbsp; <a href="/nl/cookiebeleid/">Cookiebeleid</a> &nbsp;/&nbsp; <a href="/nl/voorwaarden/">Gebruiksvoorwaarden</a></p>
+    <p>&copy; 2026 MJ Consultancy B.V.</p>
+  </div>
+</div>
+</body>
+</html>

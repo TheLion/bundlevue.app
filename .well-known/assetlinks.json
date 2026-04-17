@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.bundlevue.app",
+      "sha256_cert_fingerprints": [
+        "F1:02:23:55:17:2D:F2:14:18:3F:00:00:6F:A1:A1:FE:7E:F6:12:F1:01:49:C7:CC:F6:1B:9A:20:44:0F:BF:BB"
+      ]
+    }
+  }
+]

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacykeuzes — BundleVue</title>
+<meta name="description" content="Beheer jouw BundleVue privacykeuzes en gegevensverzoeken.">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://bundlevue.app/nl/privacy/keuzes/">
+<link rel="alternate" hreflang="nl" href="https://bundlevue.app/nl/privacy/keuzes/">
+<link rel="alternate" hreflang="en" href="https://bundlevue.app/privacy/choices/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0D1F3C; --blue: #1A3F6F; --teal: #00C9A7;
+    --white: #FFFFFF; --w60: rgba(255,255,255,0.6);
+    --w20: rgba(255,255,255,0.12); --w08: rgba(255,255,255,0.06);
+  }
+  html, body { min-height: 100vh; background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; overflow-x: hidden; scrollbar-gutter: stable; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(var(--w08) 1px, transparent 1px), linear-gradient(90deg, var(--w08) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; z-index: 0; }
+  body::after { content: ''; position: fixed; top: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 400px; background: radial-gradient(ellipse, rgba(0,201,167,0.12) 0%, transparent 70%); pointer-events: none; z-index: 0; }
+  .wrap { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; padding: 80px 24px 80px; display: flex; flex-direction: column; align-items: center; }
+  .back { display: inline-flex; align-items: center; gap: 8px; color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 500; margin-bottom: 48px; opacity: 0.8; transition: opacity 0.2s; }
+  .back:hover { opacity: 1; }
+  .wordmark { font-family: 'DM Mono', monospace; font-size: 22px; font-weight: 500; letter-spacing: -0.02em; color: var(--white); margin-bottom: 8px; }
+  .wordmark span { color: var(--teal); }
+  h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 500; margin-bottom: 8px; }
+  .updated { font-size: 13px; color: var(--w60); margin-bottom: 48px; }
+  .divider { width: 100%; height: 1px; background: var(--w20); margin-bottom: 40px; }
+  h2 { font-size: 18px; font-weight: 500; color: var(--white); margin-bottom: 12px; margin-top: 40px; }
+  h2:first-of-type { margin-top: 0; }
+  p { font-size: 15px; font-weight: 300; color: var(--w60); line-height: 1.75; margin-bottom: 16px; }
+  ul { padding-left: 20px; margin-bottom: 16px; }
+  li { font-size: 15px; font-weight: 300; color: var(--w60); line-height: 1.75; margin-bottom: 6px; }
+  a { color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(0,201,167,0.3); transition: border-color 0.2s; }
+  a:hover { border-color: var(--teal); }
+  .card { background: var(--w08); border: 1px solid var(--w20); border-radius: 16px; padding: 24px; margin-bottom: 16px; }
+  .card h3 { font-size: 16px; font-weight: 500; margin-bottom: 8px; }
+  .card p { margin-bottom: 0; }
+  .footer { margin-top: 80px; text-align: center; width: 100%; }
+  .footer p { font-size: 12px; color: rgba(255,255,255,0.2); margin-bottom: 0; line-height: 1.6; }
+  .footer p + p { margin-top: 6px; }
+  .footer a { color: rgba(255,255,255,0.35); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.15); transition: color 0.2s; }
+  .footer a:hover { color: var(--teal); border-color: var(--teal); }
+
+  .lang-switch { position: fixed; top: 20px; right: 20px; z-index: 100; display: flex; gap: 2px; background: var(--w08); border: 1px solid var(--w20); border-radius: 100px; padding: 4px; }
+  .lang-btn { padding: 5px 14px; border-radius: 100px; font-size: 12px; font-weight: 500; text-decoration: none; border: none; transition: all 0.2s; color: rgba(255,255,255,0.45); letter-spacing: 0.04em; }
+  .lang-btn.active { background: var(--teal); color: var(--navy); }
+  .lang-btn:not(.active):hover { color: rgba(255,255,255,0.8); }
+</style>
+</head>
+<body>
+<div class="lang-switch"><a href="/privacy/choices/" class="lang-btn">EN</a><span class="lang-btn active">NL</span></div>
+<div class="wrap">
+  <a class="back" href="/nl/privacy/">← Privacybeleid</a>
+  <div class="wordmark">Bundle<span>Vue</span></div>
+  <h1>Privacykeuzes</h1>
+  <p class="updated">Laatst bijgewerkt: 20 maart 2026</p>
+  <div class="divider"></div>
+
+  <p>BundleVue volgt je niet en verkoopt jouw gegevens niet. Je persoonlijke verbruiksdata blijft op jouw apparaat. Op deze pagina leggen we uit welke keuzes je hebt met betrekking tot de gegevens die we wél opslaan.</p>
+
+  <h2>Jouw opties</h2>
+
+  <div class="card">
+    <h3>Account en gegevens verwijderen</h3>
+    <p>Je kunt jouw BundleVue-account en alle bijbehorende gegevens (groepsdata, authenticatierecord) rechtstreeks vanuit de app verwijderen via <strong style="color:#fff">Instellingen → Account verwijderen</strong>. Dit is definitief en kan niet ongedaan worden gemaakt.</p>
+  </div>
+
+  <div class="card">
+    <h3>Lokale gegevens wissen</h3>
+    <p>Jouw persoonlijke verbruikshistorie, bundelconfiguratie en meldingsinstellingen worden lokaal op jouw apparaat opgeslagen. Je kunt deze gegevens wissen via <strong style="color:#fff">Instellingen → Alle gegevens wissen</strong>, of door de app te verwijderen en opnieuw te installeren.</p>
+  </div>
+
+  <div class="card">
+    <h3>Kopie van jouw gegevens opvragen</h3>
+    <p>Voor een kopie van de gegevens die we in onze backend bewaren (groepslidmaatschap, weergavenaam, verbruikstotalen), stuur je een e-mail naar <a href="mailto:hello@bundlevue.app">hello@bundlevue.app</a>. We reageren binnen 30 dagen.</p>
+  </div>
+
+  <div class="card">
+    <h3>Crashrapportage uitschakelen</h3>
+    <p>Crashrapporten (Firebase Crashlytics) worden automatisch verstuurd om ons te helpen fouten op te lossen. Deze zijn niet gekoppeld aan jouw identiteit. Er is momenteel geen in-app schakelaar voor crashrapportage. Als je dit wilt uitschakelen, neem dan contact met ons op via <a href="mailto:hello@bundlevue.app">hello@bundlevue.app</a>.</p>
+  </div>
+
+  <h2>Geen tracking, geen advertenties</h2>
+  <p>BundleVue gebruikt geen advertentie-ID's, volgt je niet via apps of websites, en verkoopt of deelt jouw gegevens niet met derden voor marketingdoeleinden.</p>
+
+  <h2>Vragen</h2>
+  <p>Voor privacygerelateerde vragen of verzoeken kun je contact opnemen via <a href="mailto:hello@bundlevue.app">hello@bundlevue.app</a>. We zijn gevestigd in Nederland en vallen onder de AVG.</p>
+
+  <footer class="footer">
+    <p>© 2026 BundleVue · MJ Consultancy B.V.</p>
+    <p class="footer-links"><a href="/nl/">Home</a> · <a href="/nl/privacy/">Privacybeleid</a> · <a href="/nl/voorwaarden/">Gebruiksvoorwaarden</a> · <a href="/nl/privacy/keuzes/">Privacykeuzes</a></p>
+  </footer>
+</div>
+</body>
+</html>

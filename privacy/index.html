@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — BundleVue</title>
+<meta name="description" content="Privacy Policy for BundleVue — Shared Data Tracker. Learn how we collect, use, and protect your personal data.">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://bundlevue.app/privacy/">
+<link rel="alternate" hreflang="nl" href="https://bundlevue.app/nl/privacy/">
+<link rel="alternate" hreflang="en" href="https://bundlevue.app/privacy/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0D1F3C; --blue: #1A3F6F; --teal: #00C9A7;
+    --white: #FFFFFF; --w60: rgba(255,255,255,0.6);
+    --w20: rgba(255,255,255,0.12); --w08: rgba(255,255,255,0.06);
+  }
+  html, body { min-height: 100vh; background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; overflow-x: hidden; scrollbar-gutter: stable; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(var(--w08) 1px, transparent 1px), linear-gradient(90deg, var(--w08) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; z-index: 0; }
+  body::after { content: ''; position: fixed; top: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 400px; background: radial-gradient(ellipse, rgba(0,201,167,0.12) 0%, transparent 70%); pointer-events: none; z-index: 0; }
+  .wrap { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; padding: 80px 24px 80px; display: flex; flex-direction: column; align-items: center; }
+  .back { display: inline-flex; align-items: center; gap: 8px; color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 500; margin-bottom: 48px; opacity: 0.8; transition: opacity 0.2s; }
+  .back:hover { opacity: 1; }
+  .wordmark { font-family: 'DM Mono', monospace; font-size: 22px; font-weight: 500; letter-spacing: -0.02em; color: var(--white); margin-bottom: 8px; }
+  .wordmark span { color: var(--teal); }
+  h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 500; margin-bottom: 8px; }
+  .updated { font-size: 13px; color: var(--w60); margin-bottom: 48px; }
+  .divider { width: 100%; height: 1px; background: var(--w20); margin-bottom: 40px; }
+  h2 { font-size: 18px; font-weight: 500; color: var(--white); margin-bottom: 12px; margin-top: 40px; }
+  h2:first-of-type { margin-top: 0; }
+  h3 { font-size: 16px; font-weight: 500; color: var(--white); margin-bottom: 8px; margin-top: 24px; }
+  p { font-size: 15px; font-weight: 300; color: var(--w60); line-height: 1.75; margin-bottom: 16px; }
+  ul { padding-left: 20px; margin-bottom: 16px; }
+  li { font-size: 15px; font-weight: 300; color: var(--w60); line-height: 1.75; margin-bottom: 6px; }
+  a { color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(0,201,167,0.3); transition: border-color 0.2s; }
+  a:hover { border-color: var(--teal); }
+  strong { color: var(--white); }
+  .highlight { background: var(--w08); border: 1px solid var(--w20); border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .highlight p { margin-bottom: 0; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 14px; }
+  th { text-align: left; color: var(--white); font-weight: 500; padding: 10px 12px; border-bottom: 1px solid var(--w20); }
+  td { color: var(--w60); padding: 10px 12px; border-bottom: 1px solid var(--w08); font-weight: 300; line-height: 1.6; }
+  .footer { margin-top: 80px; text-align: center; width: 100%; }
+  .footer p { font-size: 12px; color: rgba(255,255,255,0.2); margin-bottom: 0; line-height: 1.6; }
+  .footer p + p { margin-top: 6px; }
+  .footer a { color: rgba(255,255,255,0.35); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.15); transition: color 0.2s; }
+  .footer a:hover { color: var(--teal); border-color: var(--teal); }
+  .lang-switch { position: fixed; top: 20px; right: 20px; z-index: 100; display: flex; gap: 2px; background: var(--w08); border: 1px solid var(--w20); border-radius: 100px; padding: 4px; }
+  .lang-btn { padding: 5px 14px; border-radius: 100px; font-size: 12px; font-weight: 500; text-decoration: none; border: none; transition: all 0.2s; color: rgba(255,255,255,0.45); letter-spacing: 0.04em; }
+  .lang-btn.active { background: var(--teal); color: var(--navy); }
+  .lang-btn:not(.active):hover { color: rgba(255,255,255,0.8); }
+</style>
+</head>
+<body>
+<nav class="lang-switch">
+  <a href="/privacy/" class="lang-btn active">EN</a>
+  <a href="/nl/privacy/" class="lang-btn">NL</a>
+</nav>
+<div class="wrap">
+  <a href="/" class="back">&larr; Back to BundleVue</a>
+  <div class="wordmark">Bundle<span>Vue</span></div>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: April 12, 2026</p>
+  <div class="divider"></div>
+
+  <div class="highlight">
+    <p>BundleVue is designed with privacy in mind. Your personal usage history stays on your device. We only store data strictly necessary for the app to function.</p>
+  </div>
+
+  <h2>1. Who we are</h2>
+  <p>BundleVue is operated by:</p>
+  <p><strong>MJ Consultancy B.V.</strong><br>Paganiniplantsoen 14<br>2151 GH Nieuw-Vennep<br>Netherlands</p>
+  <p>KvK (Chamber of Commerce): 28106352<br>Email: <a href="mailto:hello@bundlevue.app">hello@bundlevue.app</a><br>Website: <a href="https://bundlevue.app">https://bundlevue.app</a></p>
+  <p>In this policy, "we", "us", and "our" refer to MJ Consultancy B.V. "BundleVue" refers to the BundleVue iOS and Android applications, the Apple Watch companion app, and the bundlevue.app website.</p>
+
+  <h2>2. What this policy covers</h2>
+  <p>This Privacy Policy explains what personal data we collect, why we collect it, how we process it, and what rights you have. It applies to:</p>
+  <ul>
+    <li>The BundleVue iOS app (including the Apple Watch companion)</li>
+    <li>The BundleVue Android app</li>
+    <li>The bundlevue.app website</li>
+    <li>Any related services we provide</li>
+  </ul>
+
+  <h2>3. Data we collect</h2>
+
+  <h3>3.1 Account data (via Sign in with Apple or Google)</h3>
+  <p>When you create an account, we use platform-native authentication:</p>
+  <ul>
+    <li><strong>On iOS and Apple Watch:</strong> Sign in with Apple. Apple provides us with a unique user identifier (Apple ID token), and — if you choose to share them — your email address and name. Apple allows you to hide your email address.</li>
+    <li><strong>On Android:</strong> Sign in with Google. Google provides us with a unique user identifier, your email address, and your name from your Google account.</li>
+  </ul>
+  <p>We store your user ID, display name, and account creation date in your profile. We do not receive or store your Apple ID password or Google password — authentication is handled entirely by Apple or Google via secure tokens.</p>
+
+  <h3>3.2 Device identifiers and push tokens</h3>
+  <p>To deliver push notifications (usage alerts, group notifications), we store a push notification token provided by the operating system:</p>
+  <ul>
+    <li><strong>iOS:</strong> Apple Push Notification service (APNs) device token</li>
+    <li><strong>Android:</strong> Firebase Cloud Messaging (FCM) registration token</li>
+  </ul>
+  <p>These tokens are rotated by the operating system and cannot be used to identify you outside of push notification delivery. They are linked to your account so we know where to deliver notifications you have configured.</p>
+
+  <h3>3.3 Usage data</h3>
+  <p>BundleVue tracks your mobile and Wi-Fi data usage on your device using system network interfaces. This data is stored locally on your device by default.</p>
+  <p><strong>When cloud sync is enabled</strong> (opt-in), the following is synced to our servers:</p>
+  <ul>
+    <li>Daily mobile data usage (bytes)</li>
+    <li>Daily Wi-Fi data usage (bytes)</li>
+    <li>Date of each usage record</li>
+    <li>Associated group ID (if you are in a group)</li>
+  </ul>
+
+  <h3>3.4 Group data</h3>
+  <p>If you create or join a group, we store:</p>
+  <ul>
+    <li>Group name, data limit, billing cycle, start date, and configuration</li>
+    <li>Your membership (user ID, group ID, role, join date)</li>
+    <li>Invitation tokens (group ID, token, creator, expiry date, usage status)</li>
+  </ul>
+
+  <h3>3.5 Subscription data</h3>
+  <p>When you subscribe to BundleVue Premium, your purchase is processed by Apple (App Store) or Google (Play Store). We use RevenueCat to manage subscriptions across both platforms. RevenueCat receives:</p>
+  <ul>
+    <li>An anonymous customer ID</li>
+    <li>Your email address (if provided)</li>
+    <li>Your display name</li>
+    <li>Your Supabase user ID (as a custom attribute)</li>
+    <li>Purchase receipts from Apple or Google</li>
+  </ul>
+  <p>We do not have access to your payment details (credit card, bank account, etc.). These are handled entirely by Apple or Google.</p>
+
+  <h3>3.6 Diagnostics and product analytics</h3>
+  <p>We use <strong>TelemetryDeck</strong>, a privacy-focused analytics service based in Austria, to understand how BundleVue is used and to identify bugs. TelemetryDeck receives:</p>
+  <ul>
+    <li>Anonymized event signals (e.g. "paywall opened", "group created") without personal content</li>
+    <li>A salted hash of your device identifier — this cannot be reversed to identify you</li>
+    <li>App version, operating system version, and device model</li>
+    <li>Basic diagnostic information about app performance</li>
+  </ul>
+  <p>In addition, Apple and Google may provide us with aggregated, anonymized crash reports for iOS and Android respectively (via App Store Connect and Google Play Console). We do not operate separate third-party crash reporting SDKs such as Firebase Crashlytics or Sentry.</p>
+
+  <h3>3.7 Data we do NOT collect</h3>
+  <ul>
+    <li><strong>No advertising:</strong> We do not use any advertising SDKs or tracking</li>
+    <li><strong>No location data:</strong> We do not access your GPS or location</li>
+    <li><strong>No contacts or photos:</strong> We do not access your contacts, photos, or other personal files</li>
+    <li><strong>No behavioral profiling:</strong> We do not build profiles of your behavior for marketing purposes</li>
+    <li><strong>No data sales:</strong> We never sell your data to third parties</li>
+  </ul>
+
+  <h2>4. How we use your data</h2>
+  <table>
+    <tr><th>Purpose</th><th>Data used</th><th>Legal basis (GDPR Art. 6)</th></tr>
+    <tr><td>Provide the app and its core features</td><td>Account data, usage data, group data</td><td>Contract performance (Art. 6(1)(b))</td></tr>
+    <tr><td>Authenticate your identity</td><td>Apple ID / Google ID token, email</td><td>Contract performance (Art. 6(1)(b))</td></tr>
+    <tr><td>Manage your subscription</td><td>Customer ID, purchase receipts</td><td>Contract performance (Art. 6(1)(b))</td></tr>
+    <tr><td>Sync usage data to the cloud</td><td>Daily usage data</td><td>Consent (Art. 6(1)(a)) — opt-in via cloud sync toggle</td></tr>
+    <tr><td>Enable group features</td><td>Usage data, group data, memberships</td><td>Contract performance (Art. 6(1)(b))</td></tr>
+    <tr><td>Deliver push notifications</td><td>APNs / FCM push tokens</td><td>Contract performance (Art. 6(1)(b))</td></tr>
+    <tr><td>Ensure security and prevent abuse</td><td>Account data, access logs</td><td>Legitimate interest (Art. 6(1)(f))</td></tr>
+    <tr><td>Understand product usage and fix bugs</td><td>Anonymized event signals, diagnostics</td><td>Legitimate interest (Art. 6(1)(f))</td></tr>
+  </table>
+  <p><strong>Cloud sync and consent:</strong> Cloud sync is optional. You can enable or disable it at any time in the app settings. When cloud sync is off, your usage data stays on your device only. However, disabling cloud sync limits app functionality: your usage data will not appear in the group dashboard, group members will not be able to see your data usage, and usage history will not be preserved across device changes or reinstallations.</p>
+
+  <h2>5. Where your data is stored</h2>
+  <p>Your data is processed and stored using <strong>Supabase</strong> (Supabase Inc.), hosted on AWS infrastructure in the <strong>EU (Frankfurt)</strong> region.</p>
+  <p>All data stored in Supabase resides within the European Union.</p>
+  <p>Data that is only stored locally on your device (when cloud sync is off) includes: bundle configuration, usage samples, daily usage records, and notification thresholds.</p>
+
+  <h2>6. Third-party services (sub-processors)</h2>
+  <p>We use the following third-party services to operate BundleVue:</p>
+
+  <h3>6.1 Supabase</h3>
+  <ul>
+    <li><strong>Provider:</strong> Supabase Inc. (USA)</li>
+    <li><strong>Purpose:</strong> Database, user authentication, realtime data sync</li>
+    <li><strong>Data stored:</strong> Account data, usage data, group data, memberships, invitations</li>
+    <li><strong>Data location:</strong> EU (Frankfurt), hosted on AWS</li>
+    <li><strong>Transfer mechanism:</strong> Supabase is certified under the EU-US Data Privacy Framework</li>
+    <li><strong>Privacy policy:</strong> <a href="https://supabase.com/privacy">https://supabase.com/privacy</a></li>
+  </ul>
+
+  <h3>6.2 RevenueCat</h3>
+  <ul>
+    <li><strong>Provider:</strong> RevenueCat Inc. (USA)</li>
+    <li><strong>Purpose:</strong> Subscription and in-app purchase management</li>
+    <li><strong>Data received:</strong> Anonymous customer ID, email (if provided), display name, Supabase user ID, Apple purchase receipts</li>
+    <li><strong>Transfer mechanism:</strong> EU-US Data Privacy Framework / Standard Contractual Clauses</li>
+    <li><strong>Privacy policy:</strong> <a href="https://www.revenuecat.com/privacy">https://www.revenuecat.com/privacy</a></li>
+  </ul>
+
+  <h3>6.3 Apple</h3>
+  <ul>
+    <li><strong>Provider:</strong> Apple Inc. (USA)</li>
+    <li><strong>Purpose:</strong> Authentication (Sign in with Apple), App Store payments, push notifications (APNs), aggregated crash reports</li>
+    <li><strong>Data received:</strong> Apple manages authentication tokens, payment processing, push notification delivery, and provides us with aggregated anonymized crash reports via App Store Connect</li>
+    <li><strong>Privacy policy:</strong> <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></li>
+  </ul>
+
+  <h3>6.4 Google</h3>
+  <ul>
+    <li><strong>Provider:</strong> Google LLC (USA)</li>
+    <li><strong>Purpose (Android only):</strong> Authentication (Sign in with Google), Play Store payments, push notifications (Firebase Cloud Messaging), aggregated crash reports</li>
+    <li><strong>Data received:</strong> Google manages authentication tokens, payment processing, FCM push notification delivery, and provides us with aggregated anonymized crash reports via Google Play Console</li>
+    <li><strong>Transfer mechanism:</strong> EU-US Data Privacy Framework</li>
+    <li><strong>Privacy policy:</strong> <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+  </ul>
+
+  <h3>6.5 TelemetryDeck</h3>
+  <ul>
+    <li><strong>Provider:</strong> TelemetryDeck UG (Austria, EU)</li>
+    <li><strong>Purpose:</strong> Privacy-focused product analytics — understanding how features are used and identifying bugs</li>
+    <li><strong>Data received:</strong> Anonymized event signals, salted hash of device identifier (cannot be reversed), app version, OS version, device model</li>
+    <li><strong>Data location:</strong> EU (Germany)</li>
+    <li><strong>Transfer mechanism:</strong> Not required — EU-based provider</li>
+    <li><strong>Privacy policy:</strong> <a href="https://telemetrydeck.com/privacy/">https://telemetrydeck.com/privacy/</a></li>
+  </ul>
+  <p>We do not share your data with any other third parties. We do not sell your data.</p>
+
+  <h2>7. Data retention</h2>
+  <table>
+    <tr><th>Data</th><th>Retention</th></tr>
+    <tr><td>Account and profile data</td><td>Kept while your account exists</td></tr>
+    <tr><td>Usage data</td><td>Kept while your account exists</td></tr>
+    <tr><td>Group data</td><td>Kept while the group exists</td></tr>
+    <tr><td>Invitation tokens</td><td>Expire after 7 days; expired tokens are cleaned up periodically</td></tr>
+    <tr><td>Subscription data (at RevenueCat)</td><td>Subject to RevenueCat's retention policy</td></tr>
+  </table>
+  <h3>7.1 How to delete your account</h3>
+  <p>You can delete your account directly from within the app:</p>
+  <p><strong>Settings → scroll down → Delete Account</strong></p>
+  <p>This immediately deletes your account and your usage data from our servers. If you are a group member, you will automatically leave the group. If you are the group owner and the only member, the group will also be deleted.</p>
+  <p>For full deletion of all associated data (including your profile, memberships, and authentication account at Supabase and RevenueCat), contact us at <a href="mailto:hello@bundlevue.app">hello@bundlevue.app</a>. We will process your request within 30 days.</p>
+  <p>When you delete your account:</p>
+  <ul>
+    <li>Your usage data is deleted from our servers</li>
+    <li>Your account and profile are removed</li>
+    <li>Your group memberships are ended</li>
+    <li>Data stored locally on your device is not automatically removed — you can clear it by uninstalling the app</li>
+  </ul>
+
+  <h2>8. Your rights under GDPR</h2>
+  <p>As a data subject under the General Data Protection Regulation (GDPR / AVG), you have the following rights:</p>
+  <table>
+    <tr><th>Right</th><th>Description</th></tr>
+    <tr><td><strong>Access</strong></td><td>Request a copy of the personal data we hold about you</td></tr>
+    <tr><td><strong>Rectification</strong></td><td>Request correction of inaccurate data</td></tr>
+    <tr><td><strong>Erasure</strong></td><td>Request deletion of your data ("right to be forgotten")</td></tr>
+    <tr><td><strong>Portability</strong></td><td>Request your data in a structured, machine-readable format</td></tr>
+    <tr><td><strong>Restriction</strong></td><td>Request that we limit how we process your data</td></tr>
+    <tr><td><strong>Objection</strong></td><td>Object to processing based on legitimate interest</td></tr>
+    <tr><td><strong>Withdraw consent</strong></td><td>Withdraw consent for cloud sync at any time by disabling it in the app</td></tr>
+  </table>
+  <p>To exercise any of these rights, email us at <strong><a href="mailto:hello@bundlevue.app">hello@bundlevue.app</a></strong>. We will respond within 30 days.</p>
+  <p>If you are not satisfied with our response, you have the right to lodge a complaint with the Dutch Data Protection Authority (Autoriteit Persoonsgegevens): <a href="https://autoriteitpersoonsgegevens.nl">https://autoriteitpersoonsgegevens.nl</a></p>
+
+  <h2>9. Data security</h2>
+  <p>We take appropriate technical and organizational measures to protect your data, including:</p>
+  <ul>
+    <li>All data in transit is encrypted via TLS/HTTPS</li>
+    <li>Database access is restricted through Row Level Security (RLS) policies in Supabase</li>
+    <li>Authentication is handled through Sign in with Apple (iOS) or Sign in with Google (Android), which does not expose your Apple ID or Google password to us</li>
+    <li>We do not store passwords — authentication is token-based</li>
+    <li>Access to backend systems is restricted to authorized personnel only</li>
+  </ul>
+
+  <h2>10. Children's privacy</h2>
+  <p>BundleVue is not directed at children under 16. We do not knowingly collect personal data from children under 16. If you believe a child under 16 has provided us with personal data, please contact us at <a href="mailto:hello@bundlevue.app">hello@bundlevue.app</a> and we will delete it promptly.</p>
+  <p>BundleVue does offer parental control features within group bundles, which are managed by the group owner (parent/guardian).</p>
+
+  <h2>11. International data transfers</h2>
+  <p>Our primary data storage is in the EU (Frankfurt and, for TelemetryDeck, Germany). Where data is processed by sub-processors in the United States (Supabase, RevenueCat, Apple, Google), appropriate safeguards are in place:</p>
+  <ul>
+    <li>EU-US Data Privacy Framework certification</li>
+    <li>Standard Contractual Clauses (SCCs) where applicable</li>
+  </ul>
+
+  <h2>12. Changes to this policy</h2>
+  <p>We may update this Privacy Policy from time to time. When we make material changes, we will:</p>
+  <ul>
+    <li>Update the "Last updated" date at the top of this page</li>
+    <li>Notify you through the app or via email (if we have your email address)</li>
+  </ul>
+  <p>We encourage you to review this policy periodically.</p>
+
+  <h2>13. Cookie policy</h2>
+  <p>Our cookie policy is a separate document. You can find it at: <a href="https://bundlevue.app/cookie-policy/">https://bundlevue.app/cookie-policy/</a></p>
+
+  <h2>14. Contact</h2>
+  <p>If you have any questions about this Privacy Policy or your personal data, contact us at:</p>
+  <p><strong>MJ Consultancy B.V.</strong><br>Paganiniplantsoen 14<br>2151 GH Nieuw-Vennep<br>Netherlands</p>
+  <p>Email: <a href="mailto:hello@bundlevue.app">hello@bundlevue.app</a></p>
+
+  <div class="footer">
+    <p><a href="/">Home</a> &nbsp;/&nbsp; <a href="/privacy/">Privacy Policy</a> &nbsp;/&nbsp; <a href="/cookie-policy/">Cookie Policy</a> &nbsp;/&nbsp; <a href="/terms/">Terms of Use</a></p>
+    <p>&copy; 2026 MJ Consultancy B.V.</p>
+  </div>
+</div>
+</body>
+</html>

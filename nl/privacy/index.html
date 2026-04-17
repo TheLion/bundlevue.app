@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacybeleid — BundleVue</title>
+<meta name="description" content="Privacybeleid voor BundleVue — Shared Data Tracker. Lees hoe wij uw persoonsgegevens verzamelen, gebruiken en beschermen.">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://bundlevue.app/nl/privacy/">
+<link rel="alternate" hreflang="nl" href="https://bundlevue.app/nl/privacy/">
+<link rel="alternate" hreflang="en" href="https://bundlevue.app/privacy/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0D1F3C; --blue: #1A3F6F; --teal: #00C9A7;
+    --white: #FFFFFF; --w60: rgba(255,255,255,0.6);
+    --w20: rgba(255,255,255,0.12); --w08: rgba(255,255,255,0.06);
+  }
+  html, body { min-height: 100vh; background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; overflow-x: hidden; scrollbar-gutter: stable; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(var(--w08) 1px, transparent 1px), linear-gradient(90deg, var(--w08) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; z-index: 0; }
+  body::after { content: ''; position: fixed; top: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 400px; background: radial-gradient(ellipse, rgba(0,201,167,0.12) 0%, transparent 70%); pointer-events: none; z-index: 0; }
+  .wrap { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; padding: 80px 24px 80px; display: flex; flex-direction: column; align-items: center; }
+  .back { display: inline-flex; align-items: center; gap: 8px; color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 500; margin-bottom: 48px; opacity: 0.8; transition: opacity 0.2s; }
+  .back:hover { opacity: 1; }
+  .wordmark { font-family: 'DM Mono', monospace; font-size: 22px; font-weight: 500; letter-spacing: -0.02em; color: var(--white); margin-bottom: 8px; }
+  .wordmark span { color: var(--teal); }
+  h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 500; margin-bottom: 8px; }
+  .updated { font-size: 13px; color: var(--w60); margin-bottom: 48px; }
+  .divider { width: 100%; height: 1px; background: var(--w20); margin-bottom: 40px; }
+  h2 { font-size: 18px; font-weight: 500; color: var(--white); margin-bottom: 12px; margin-top: 40px; }
+  h2:first-of-type { margin-top: 0; }
+  h3 { font-size: 16px; font-weight: 500; color: var(--white); margin-bottom: 8px; margin-top: 24px; }
+  p { font-size: 15px; font-weight: 300; color: var(--w60); line-height: 1.75; margin-bottom: 16px; }
+  ul { padding-left: 20px; margin-bottom: 16px; }
+  li { font-size: 15px; font-weight: 300; color: var(--w60); line-height: 1.75; margin-bottom: 6px; }
+  a { color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(0,201,167,0.3); transition: border-color 0.2s; }
+  a:hover { border-color: var(--teal); }
+  strong { color: var(--white); }
+  .highlight { background: var(--w08); border: 1px solid var(--w20); border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .highlight p { margin-bottom: 0; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 14px; }
+  th { text-align: left; color: var(--white); font-weight: 500; padding: 10px 12px; border-bottom: 1px solid var(--w20); }
+  td { color: var(--w60); padding: 10px 12px; border-bottom: 1px solid var(--w08); font-weight: 300; line-height: 1.6; }
+  .footer { margin-top: 80px; text-align: center; width: 100%; }
+  .footer p { font-size: 12px; color: rgba(255,255,255,0.2); margin-bottom: 0; line-height: 1.6; }
+  .footer p + p { margin-top: 6px; }
+  .footer a { color: rgba(255,255,255,0.35); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.15); transition: color 0.2s; }
+  .footer a:hover { color: var(--teal); border-color: var(--teal); }
+  .lang-switch { position: fixed; top: 20px; right: 20px; z-index: 100; display: flex; gap: 2px; background: var(--w08); border: 1px solid var(--w20); border-radius: 100px; padding: 4px; }
+  .lang-btn { padding: 5px 14px; border-radius: 100px; font-size: 12px; font-weight: 500; text-decoration: none; border: none; transition: all 0.2s; color: rgba(255,255,255,0.45); letter-spacing: 0.04em; }
+  .lang-btn.active { background: var(--teal); color: var(--navy); }
+  .lang-btn:not(.active):hover { color: rgba(255,255,255,0.8); }
+</style>
+</head>
+<body>
+<nav class="lang-switch">
+  <a href="/privacy/" class="lang-btn">EN</a>
+  <a href="/nl/privacy/" class="lang-btn active">NL</a>
+</nav>
+<div class="wrap">
+  <a href="/nl/" class="back">&larr; Terug naar BundleVue</a>
+  <div class="wordmark">Bundle<span>Vue</span></div>
+  <h1>Privacybeleid</h1>
+  <p class="updated">Laatst bijgewerkt: 12 april 2026</p>
+  <div class="divider"></div>
+
+  <div class="highlight">
+    <p>BundleVue is ontworpen met privacy voorop. Uw persoonlijke verbruiksgeschiedenis blijft op uw apparaat. Wij slaan alleen gegevens op die strikt noodzakelijk zijn voor het functioneren van de app.</p>
+  </div>
+
+  <h2>1. Wie wij zijn</h2>
+  <p>BundleVue wordt beheerd door:</p>
+  <p><strong>MJ Consultancy B.V.</strong><br>Paganiniplantsoen 14<br>2151 GH Nieuw-Vennep<br>Nederland</p>
+  <p>KvK (Kamer van Koophandel): 28106352<br>E-mail: <a href="mailto:hello@bundlevue.app">hello@bundlevue.app</a><br>Website: <a href="https://bundlevue.app">https://bundlevue.app</a></p>
+  <p>In dit beleid verwijzen "wij", "ons" en "onze" naar MJ Consultancy B.V. "BundleVue" verwijst naar de BundleVue iOS- en Android-applicaties, de Apple Watch-begeleidingsapp en de website bundlevue.app.</p>
+
+  <h2>2. Wat dit beleid omvat</h2>
+  <p>Dit Privacybeleid legt uit welke persoonsgegevens wij verzamelen, waarom wij die verzamelen, hoe wij deze verwerken en welke rechten u heeft. Het is van toepassing op:</p>
+  <ul>
+    <li>De BundleVue iOS-app (inclusief de Apple Watch-begeleidingsapp)</li>
+    <li>De BundleVue Android-app</li>
+    <li>De website bundlevue.app</li>
+    <li>Alle gerelateerde diensten die wij aanbieden</li>
+  </ul>
+
+  <h2>3. Gegevens die wij verzamelen</h2>
+
+  <h3>3.1 Accountgegevens (via Log in met Apple of Google)</h3>
+  <p>Wanneer u een account aanmaakt, gebruiken wij platformeigen authenticatie:</p>
+  <ul>
+    <li><strong>Op iOS en Apple Watch:</strong> Log in met Apple. Apple verstrekt ons een unieke gebruikersidentificatie (Apple ID-token) en — indien u ervoor kiest deze te delen — uw e-mailadres en naam. Apple biedt de mogelijkheid uw e-mailadres te verbergen.</li>
+    <li><strong>Op Android:</strong> Log in met Google. Google verstrekt ons een unieke gebruikersidentificatie, uw e-mailadres en uw naam uit uw Google-account.</li>
+  </ul>
+  <p>Wij slaan uw gebruikers-ID, weergavenaam en aanmaakdatum van het account op in uw profiel. Wij ontvangen of bewaren geen Apple ID- of Google-wachtwoord — authenticatie wordt volledig afgehandeld door Apple of Google via beveiligde tokens.</p>
+
+  <h3>3.2 Apparaatidentificaties en pushtokens</h3>
+  <p>Om pushnotificaties te bezorgen (verbruiksmeldingen, groepsmeldingen), slaan wij een pushnotificatietoken op dat door het besturingssysteem wordt verstrekt:</p>
+  <ul>
+    <li><strong>iOS:</strong> Apple Push Notification service (APNs) apparaattoken</li>
+    <li><strong>Android:</strong> Firebase Cloud Messaging (FCM) registratietoken</li>
+  </ul>
+  <p>Deze tokens worden door het besturingssysteem geroteerd en kunnen niet worden gebruikt om u te identificeren buiten het bezorgen van pushnotificaties. Ze zijn gekoppeld aan uw account zodat wij weten waar wij de door u geconfigureerde notificaties moeten bezorgen.</p>
+
+  <h3>3.3 Gebruiksgegevens</h3>
+  <p>BundleVue houdt uw mobiele en Wi-Fi-dataverbruik bij op uw apparaat via systeemnetwerkinterfaces. Deze gegevens worden standaard lokaal op uw apparaat opgeslagen.</p>
+  <p><strong>Wanneer cloudsynchronisatie is ingeschakeld</strong> (opt-in), worden de volgende gegevens gesynchroniseerd met onze servers:</p>
+  <ul>
+    <li>Dagelijks mobiel dataverbruik (bytes)</li>
+    <li>Dagelijks Wi-Fi-dataverbruik (bytes)</li>
+    <li>Datum van elk verbruiksrecord</li>
+    <li>Bijbehorend groeps-ID (indien u lid bent van een groep)</li>
+  </ul>
+
+  <h3>3.4 Groepsgegevens</h3>
+  <p>Als u een groep aanmaakt of zich bij een groep aansluit, slaan wij het volgende op:</p>
+  <ul>
+    <li>Groepsnaam, datalimiet, factuurcyclus, startdatum en configuratie</li>
+    <li>Uw lidmaatschap (gebruikers-ID, groeps-ID, rol, toetredingsdatum)</li>
+    <li>Uitnodigingstokens (groeps-ID, token, aanmaker, vervaldatum, gebruiksstatus)</li>
+  </ul>
+
+  <h3>3.5 Abonnementsgegevens</h3>
+  <p>Wanneer u zich abonneert op BundleVue Premium, wordt uw aankoop verwerkt door Apple (App Store) of Google (Play Store). Wij gebruiken RevenueCat voor het beheren van abonnementen op beide platforms. RevenueCat ontvangt:</p>
+  <ul>
+    <li>Een anoniem klant-ID</li>
+    <li>Uw e-mailadres (indien opgegeven)</li>
+    <li>Uw weergavenaam</li>
+    <li>Uw Supabase-gebruikers-ID (als aangepast kenmerk)</li>
+    <li>Aankoopbewijzen van Apple of Google</li>
+  </ul>
+  <p>Wij hebben geen toegang tot uw betaalgegevens (creditcard, bankrekening, etc.). Deze worden volledig door Apple of Google afgehandeld.</p>
+
+  <h3>3.6 Diagnostiek en productanalyse</h3>
+  <p>Wij gebruiken <strong>TelemetryDeck</strong>, een privacyvriendelijke analysedienst gevestigd in Oostenrijk, om te begrijpen hoe BundleVue wordt gebruikt en om bugs te identificeren. TelemetryDeck ontvangt:</p>
+  <ul>
+    <li>Anonieme gebeurtenissignalen (bijv. "paywall geopend", "groep aangemaakt") zonder persoonlijke inhoud</li>
+    <li>Een gesalte hash van uw apparaatidentificatie — deze kan niet worden teruggehaald om u te identificeren</li>
+    <li>App-versie, besturingssysteemversie en apparaatmodel</li>
+    <li>Basisdiagnostische informatie over app-prestaties</li>
+  </ul>
+  <p>Daarnaast kunnen Apple en Google ons geaggregeerde, anonieme crashrapporten verstrekken voor respectievelijk iOS en Android (via App Store Connect en Google Play Console). Wij gebruiken geen aparte crashrapportage-SDK's van derden zoals Firebase Crashlytics of Sentry.</p>
+
+  <h3>3.7 Gegevens die wij NIET verzamelen</h3>
+  <ul>
+    <li><strong>Geen advertenties:</strong> Wij gebruiken geen advertentie-SDK's of tracking</li>
+    <li><strong>Geen locatiegegevens:</strong> Wij hebben geen toegang tot uw GPS of locatie</li>
+    <li><strong>Geen contacten of foto's:</strong> Wij hebben geen toegang tot uw contacten, foto's of andere persoonlijke bestanden</li>
+    <li><strong>Geen gedragsprofielen:</strong> Wij bouwen geen profielen op van uw gedrag voor marketingdoeleinden</li>
+    <li><strong>Geen verkoop van gegevens:</strong> Wij verkopen uw gegevens nooit aan derden</li>
+  </ul>
+
+  <h2>4. Hoe wij uw gegevens gebruiken</h2>
+  <table>
+    <tr><th>Doel</th><th>Gebruikte gegevens</th><th>Rechtsgrond (AVG Art. 6)</th></tr>
+    <tr><td>De app en kernfuncties aanbieden</td><td>Accountgegevens, gebruiksgegevens, groepsgegevens</td><td>Uitvoering van een overeenkomst (Art. 6(1)(b))</td></tr>
+    <tr><td>Uw identiteit verifi&euml;ren</td><td>Apple ID / Google ID-token, e-mail</td><td>Uitvoering van een overeenkomst (Art. 6(1)(b))</td></tr>
+    <tr><td>Uw abonnement beheren</td><td>Klant-ID, aankoopbewijzen</td><td>Uitvoering van een overeenkomst (Art. 6(1)(b))</td></tr>
+    <tr><td>Gebruiksgegevens synchroniseren met de cloud</td><td>Dagelijkse gebruiksgegevens</td><td>Toestemming (Art. 6(1)(a)) — opt-in via cloudsynchronisatie-instelling</td></tr>
+    <tr><td>Groepsfuncties mogelijk maken</td><td>Gebruiksgegevens, groepsgegevens, lidmaatschappen</td><td>Uitvoering van een overeenkomst (Art. 6(1)(b))</td></tr>
+    <tr><td>Pushnotificaties bezorgen</td><td>APNs / FCM pushtokens</td><td>Uitvoering van een overeenkomst (Art. 6(1)(b))</td></tr>
+    <tr><td>Beveiliging waarborgen en misbruik voorkomen</td><td>Accountgegevens, toegangslogboeken</td><td>Gerechtvaardigd belang (Art. 6(1)(f))</td></tr>
+    <tr><td>Productgebruik begrijpen en bugs oplossen</td><td>Anonieme gebeurtenissignalen, diagnostiek</td><td>Gerechtvaardigd belang (Art. 6(1)(f))</td></tr>
+  </table>
+  <p><strong>Cloudsynchronisatie en toestemming:</strong> Cloudsynchronisatie is optioneel. U kunt deze op elk moment in- of uitschakelen in de app-instellingen. Wanneer cloudsynchronisatie is uitgeschakeld, blijven uw gebruiksgegevens uitsluitend op uw apparaat. Het uitschakelen van cloudsynchronisatie beperkt echter de functionaliteit van de app: uw verbruiksgegevens worden niet weergegeven in het groepsdashboard, groepsleden kunnen uw dataverbruik niet zien, en de verbruiksgeschiedenis blijft niet bewaard bij apparaatwisseling of herinstallatie.</p>
+
+  <h2>5. Waar uw gegevens worden opgeslagen</h2>
+  <p>Uw gegevens worden verwerkt en opgeslagen via <strong>Supabase</strong> (Supabase Inc.), gehost op AWS-infrastructuur in de <strong>EU (Frankfurt)</strong>-regio.</p>
+  <p>Alle gegevens die in Supabase zijn opgeslagen, bevinden zich binnen de Europese Unie.</p>
+  <p>Gegevens die alleen lokaal op uw apparaat worden opgeslagen (wanneer cloudsynchronisatie is uitgeschakeld) omvatten: bundelconfiguratie, verbruiksmetingen, dagelijkse verbruiksrecords en notificatiedrempels.</p>
+
+  <h2>6. Diensten van derden (subverwerkers)</h2>
+  <p>Wij gebruiken de volgende diensten van derden voor de werking van BundleVue:</p>
+
+  <h3>6.1 Supabase</h3>
+  <ul>
+    <li><strong>Aanbieder:</strong> Supabase Inc. (VS)</li>
+    <li><strong>Doel:</strong> Database, gebruikersauthenticatie, realtime datasynchronisatie</li>
+    <li><strong>Opgeslagen gegevens:</strong> Accountgegevens, gebruiksgegevens, groepsgegevens, lidmaatschappen, uitnodigingen</li>
+    <li><strong>Gegevenslocatie:</strong> EU (Frankfurt), gehost op AWS</li>
+    <li><strong>Doorgifte-mechanisme:</strong> Supabase is gecertificeerd onder het EU-VS Data Privacy Framework</li>
+    <li><strong>Privacybeleid:</strong> <a href="https://supabase.com/privacy">https://supabase.com/privacy</a></li>
+  </ul>
+
+  <h3>6.2 RevenueCat</h3>
+  <ul>
+    <li><strong>Aanbieder:</strong> RevenueCat Inc. (VS)</li>
+    <li><strong>Doel:</strong> Beheer van abonnementen en in-app aankopen</li>
+    <li><strong>Ontvangen gegevens:</strong> Anoniem klant-ID, e-mail (indien opgegeven), weergavenaam, Supabase-gebruikers-ID, Apple-aankoopbewijzen</li>
+    <li><strong>Doorgifte-mechanisme:</strong> EU-VS Data Privacy Framework / Standaardcontractbepalingen</li>
+    <li><strong>Privacybeleid:</strong> <a href="https://www.revenuecat.com/privacy">https://www.revenuecat.com/privacy</a></li>
+  </ul>
+
+  <h3>6.3 Apple</h3>
+  <ul>
+    <li><strong>Aanbieder:</strong> Apple Inc. (VS)</li>
+    <li><strong>Doel:</strong> Authenticatie (Log in met Apple), App Store-betalingen, pushnotificaties (APNs), geaggregeerde crashrapporten</li>
+    <li><strong>Ontvangen gegevens:</strong> Apple beheert authenticatietokens, betalingsverwerking, bezorging van pushnotificaties en verstrekt ons geaggregeerde anonieme crashrapporten via App Store Connect</li>
+    <li><strong>Privacybeleid:</strong> <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></li>
+  </ul>
+
+  <h3>6.4 Google</h3>
+  <ul>
+    <li><strong>Aanbieder:</strong> Google LLC (VS)</li>
+    <li><strong>Doel (alleen Android):</strong> Authenticatie (Log in met Google), Play Store-betalingen, pushnotificaties (Firebase Cloud Messaging), geaggregeerde crashrapporten</li>
+    <li><strong>Ontvangen gegevens:</strong> Google beheert authenticatietokens, betalingsverwerking, bezorging van FCM-pushnotificaties en verstrekt ons geaggregeerde anonieme crashrapporten via Google Play Console</li>
+    <li><strong>Doorgifte-mechanisme:</strong> EU-VS Data Privacy Framework</li>
+    <li><strong>Privacybeleid:</strong> <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+  </ul>
+
+  <h3>6.5 TelemetryDeck</h3>
+  <ul>
+    <li><strong>Aanbieder:</strong> TelemetryDeck UG (Oostenrijk, EU)</li>
+    <li><strong>Doel:</strong> Privacyvriendelijke productanalyse — begrijpen hoe functies worden gebruikt en bugs identificeren</li>
+    <li><strong>Ontvangen gegevens:</strong> Anonieme gebeurtenissignalen, gesalte hash van apparaatidentificatie (niet omkeerbaar), app-versie, OS-versie, apparaatmodel</li>
+    <li><strong>Gegevenslocatie:</strong> EU (Duitsland)</li>
+    <li><strong>Doorgifte-mechanisme:</strong> Niet nodig — EU-gevestigde aanbieder</li>
+    <li><strong>Privacybeleid:</strong> <a href="https://telemetrydeck.com/privacy/">https://telemetrydeck.com/privacy/</a></li>
+  </ul>
+  <p>Wij delen uw gegevens niet met andere derden. Wij verkopen uw gegevens niet.</p>
+
+  <h2>7. Bewaartermijnen</h2>
+  <table>
+    <tr><th>Gegevens</th><th>Bewaartermijn</th></tr>
+    <tr><td>Account- en profielgegevens</td><td>Bewaard zolang uw account bestaat</td></tr>
+    <tr><td>Gebruiksgegevens</td><td>Bewaard zolang uw account bestaat</td></tr>
+    <tr><td>Groepsgegevens</td><td>Bewaard zolang de groep bestaat</td></tr>
+    <tr><td>Uitnodigingstokens</td><td>Verlopen na 7 dagen; verlopen tokens worden periodiek opgeruimd</td></tr>
+    <tr><td>Abonnementsgegevens (bij RevenueCat)</td><td>Conform het bewaarbeleid van RevenueCat</td></tr>
+  </table>
+  <h3>7.1 Hoe u uw account kunt verwijderen</h3>
+  <p>U kunt uw account rechtstreeks vanuit de app verwijderen:</p>
+  <p><strong>Instellingen → scroll naar beneden → Account verwijderen</strong></p>
+  <p>Dit verwijdert uw account en gebruiksgegevens direct van onze servers. Als u groepslid bent, verlaat u automatisch de groep. Als u de eigenaar van de groep bent en het enige lid, wordt de groep ook verwijderd.</p>
+  <p>Voor volledige verwijdering van alle bijbehorende gegevens (inclusief uw profiel, lidmaatschappen en authenticatieaccount bij Supabase en RevenueCat) kunt u contact met ons opnemen via <a href="mailto:hello@bundlevue.app">hello@bundlevue.app</a>. Wij verwerken uw verzoek binnen 30 dagen.</p>
+  <p>Wanneer u uw account verwijdert:</p>
+  <ul>
+    <li>Worden uw gebruiksgegevens van onze servers verwijderd</li>
+    <li>Worden uw account en profiel verwijderd</li>
+    <li>Worden uw groepslidmaatschappen beëindigd</li>
+    <li>Worden lokaal op uw apparaat opgeslagen gegevens niet automatisch verwijderd — u kunt deze wissen door de app te verwijderen</li>
+  </ul>
+
+  <h2>8. Uw rechten onder de AVG</h2>
+  <p>Als betrokkene onder de Algemene Verordening Gegevensbescherming (AVG / GDPR) heeft u de volgende rechten:</p>
+  <table>
+    <tr><th>Recht</th><th>Omschrijving</th></tr>
+    <tr><td><strong>Inzage</strong></td><td>Een kopie opvragen van de persoonsgegevens die wij van u bewaren</td></tr>
+    <tr><td><strong>Rectificatie</strong></td><td>Correctie verzoeken van onjuiste gegevens</td></tr>
+    <tr><td><strong>Wissing</strong></td><td>Verwijdering van uw gegevens verzoeken ("recht op vergetelheid")</td></tr>
+    <tr><td><strong>Overdraagbaarheid</strong></td><td>Uw gegevens opvragen in een gestructureerd, machineleesbaar formaat</td></tr>
+    <tr><td><strong>Beperking</strong></td><td>Verzoeken dat wij de verwerking van uw gegevens beperken</td></tr>
+    <tr><td><strong>Bezwaar</strong></td><td>Bezwaar maken tegen verwerking op basis van gerechtvaardigd belang</td></tr>
+    <tr><td><strong>Toestemming intrekken</strong></td><td>Toestemming voor cloudsynchronisatie op elk moment intrekken door deze in de app uit te schakelen</td></tr>
+  </table>
+  <p>Om een van deze rechten uit te oefenen, kunt u ons e-mailen op <strong><a href="mailto:hello@bundlevue.app">hello@bundlevue.app</a></strong>. Wij reageren binnen 30 dagen.</p>
+  <p>Als u niet tevreden bent met onze reactie, heeft u het recht een klacht in te dienen bij de Autoriteit Persoonsgegevens: <a href="https://autoriteitpersoonsgegevens.nl">https://autoriteitpersoonsgegevens.nl</a></p>
+
+  <h2>9. Gegevensbeveiliging</h2>
+  <p>Wij nemen passende technische en organisatorische maatregelen om uw gegevens te beschermen, waaronder:</p>
+  <ul>
+    <li>Alle gegevens in transit zijn versleuteld via TLS/HTTPS</li>
+    <li>Databasetoegang is beperkt door Row Level Security (RLS)-beleid in Supabase</li>
+    <li>Authenticatie verloopt via Log in met Apple (iOS) of Log in met Google (Android), waardoor uw Apple ID- of Google-wachtwoord niet aan ons wordt blootgesteld</li>
+    <li>Wij slaan geen wachtwoorden op — authenticatie is token-gebaseerd</li>
+    <li>Toegang tot backendsystemen is beperkt tot geautoriseerd personeel</li>
+  </ul>
+
+  <h2>10. Privacy van kinderen</h2>
+  <p>BundleVue is niet gericht op kinderen jonger dan 16 jaar. Wij verzamelen niet bewust persoonsgegevens van kinderen jonger dan 16 jaar. Als u vermoedt dat een kind jonger dan 16 jaar ons persoonsgegevens heeft verstrekt, neem dan contact met ons op via <a href="mailto:hello@bundlevue.app">hello@bundlevue.app</a> en wij zullen deze onmiddellijk verwijderen.</p>
+  <p>BundleVue biedt wel ouderlijk toezichtfuncties binnen groepsbundels, die worden beheerd door de groepseigenaar (ouder/voogd).</p>
+
+  <h2>11. Internationale gegevensdoorgifte</h2>
+  <p>Onze primaire gegevensopslag bevindt zich in de EU (Frankfurt en, voor TelemetryDeck, Duitsland). Waar gegevens worden verwerkt door subverwerkers in de Verenigde Staten (Supabase, RevenueCat, Apple, Google), zijn passende waarborgen van toepassing:</p>
+  <ul>
+    <li>Certificering onder het EU-VS Data Privacy Framework</li>
+    <li>Standaardcontractbepalingen (SCC's) waar van toepassing</li>
+  </ul>
+
+  <h2>12. Wijzigingen in dit beleid</h2>
+  <p>Wij kunnen dit Privacybeleid van tijd tot tijd bijwerken. Wanneer wij wezenlijke wijzigingen aanbrengen, zullen wij:</p>
+  <ul>
+    <li>De datum bij "Laatst bijgewerkt" bovenaan deze pagina aanpassen</li>
+    <li>U op de hoogte stellen via de app of per e-mail (indien wij uw e-mailadres hebben)</li>
+  </ul>
+  <p>Wij raden u aan dit beleid regelmatig te raadplegen.</p>
+
+  <h2>13. Cookiebeleid</h2>
+  <p>Ons cookiebeleid is een apart document. U vindt het op: <a href="https://bundlevue.app/nl/cookiebeleid/">https://bundlevue.app/nl/cookiebeleid/</a></p>
+
+  <h2>14. Contact</h2>
+  <p>Als u vragen heeft over dit Privacybeleid of uw persoonsgegevens, kunt u contact met ons opnemen via:</p>
+  <p><strong>MJ Consultancy B.V.</strong><br>Paganiniplantsoen 14<br>2151 GH Nieuw-Vennep<br>Nederland</p>
+  <p>E-mail: <a href="mailto:hello@bundlevue.app">hello@bundlevue.app</a></p>
+
+  <div class="footer">
+    <p><a href="/nl/">Home</a> &nbsp;/&nbsp; <a href="/nl/privacy/">Privacybeleid</a> &nbsp;/&nbsp; <a href="/nl/cookiebeleid/">Cookiebeleid</a> &nbsp;/&nbsp; <a href="/nl/voorwaarden/">Gebruiksvoorwaarden</a></p>
+    <p>&copy; 2026 MJ Consultancy B.V.</p>
+  </div>
+</div>
+</body>
+</html>

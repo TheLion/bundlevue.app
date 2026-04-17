@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookiebeleid — BundleVue</title>
+<meta name="description" content="Cookiebeleid voor BundleVue — bundlevue.app. Lees hoe wij cookies en vergelijkbare technologieën gebruiken op onze website.">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://bundlevue.app/nl/cookiebeleid/">
+<link rel="alternate" hreflang="nl" href="https://bundlevue.app/nl/cookiebeleid/">
+<link rel="alternate" hreflang="en" href="https://bundlevue.app/cookie-policy/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0D1F3C; --blue: #1A3F6F; --teal: #00C9A7;
+    --white: #FFFFFF; --w60: rgba(255,255,255,0.6);
+    --w20: rgba(255,255,255,0.12); --w08: rgba(255,255,255,0.06);
+  }
+  html, body { min-height: 100vh; background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; overflow-x: hidden; scrollbar-gutter: stable; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(var(--w08) 1px, transparent 1px), linear-gradient(90deg, var(--w08) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; z-index: 0; }
+  body::after { content: ''; position: fixed; top: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 400px; background: radial-gradient(ellipse, rgba(0,201,167,0.12) 0%, transparent 70%); pointer-events: none; z-index: 0; }
+  .wrap { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; padding: 80px 24px 80px; display: flex; flex-direction: column; align-items: center; }
+  .back { display: inline-flex; align-items: center; gap: 8px; color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 500; margin-bottom: 48px; opacity: 0.8; transition: opacity 0.2s; }
+  .back:hover { opacity: 1; }
+  .wordmark { font-family: 'DM Mono', monospace; font-size: 22px; font-weight: 500; letter-spacing: -0.02em; color: var(--white); margin-bottom: 8px; }
+  .wordmark span { color: var(--teal); }
+  h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 500; margin-bottom: 8px; }
+  .updated { font-size: 13px; color: var(--w60); margin-bottom: 48px; }
+  .divider { width: 100%; height: 1px; background: var(--w20); margin-bottom: 40px; }
+  h2 { font-size: 18px; font-weight: 500; color: var(--white); margin-bottom: 12px; margin-top: 40px; }
+  h2:first-of-type { margin-top: 0; }
+  h3 { font-size: 16px; font-weight: 500; color: var(--white); margin-bottom: 8px; margin-top: 24px; }
+  p { font-size: 15px; font-weight: 300; color: var(--w60); line-height: 1.75; margin-bottom: 16px; }
+  ul, ol { padding-left: 20px; margin-bottom: 16px; }
+  li { font-size: 15px; font-weight: 300; color: var(--w60); line-height: 1.75; margin-bottom: 6px; }
+  a { color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(0,201,167,0.3); transition: border-color 0.2s; }
+  a:hover { border-color: var(--teal); }
+  strong { color: var(--white); }
+  .highlight { background: var(--w08); border: 1px solid var(--w20); border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .highlight p { margin-bottom: 0; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 14px; }
+  th { text-align: left; color: var(--white); font-weight: 500; padding: 10px 12px; border-bottom: 1px solid var(--w20); }
+  td { color: var(--w60); padding: 10px 12px; border-bottom: 1px solid var(--w08); font-weight: 300; line-height: 1.6; }
+  .footer { margin-top: 80px; text-align: center; width: 100%; }
+  .footer p { font-size: 12px; color: rgba(255,255,255,0.2); margin-bottom: 0; line-height: 1.6; }
+  .footer p + p { margin-top: 6px; }
+  .footer a { color: rgba(255,255,255,0.35); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.15); transition: color 0.2s; }
+  .footer a:hover { color: var(--teal); border-color: var(--teal); }
+  .lang-switch { position: fixed; top: 20px; right: 20px; z-index: 100; display: flex; gap: 2px; background: var(--w08); border: 1px solid var(--w20); border-radius: 100px; padding: 4px; }
+  .lang-btn { padding: 5px 14px; border-radius: 100px; font-size: 12px; font-weight: 500; text-decoration: none; border: none; transition: all 0.2s; color: rgba(255,255,255,0.45); letter-spacing: 0.04em; }
+  .lang-btn.active { background: var(--teal); color: var(--navy); }
+  .lang-btn:not(.active):hover { color: rgba(255,255,255,0.8); }
+</style>
+</head>
+<body>
+<nav class="lang-switch">
+  <a href="/cookie-policy/" class="lang-btn">EN</a>
+  <a href="/nl/cookiebeleid/" class="lang-btn active">NL</a>
+</nav>
+<div class="wrap">
+  <a href="/nl/" class="back">&larr; Terug naar BundleVue</a>
+  <div class="wordmark">Bundle<span>Vue</span></div>
+  <h1>Cookiebeleid</h1>
+  <p class="updated">Laatst bijgewerkt: 24 maart 2026</p>
+  <div class="divider"></div>
+
+  <div class="highlight">
+    <p>Wij gebruiken momenteel alleen essenti&euml;le cookies. Geen analytics-, advertentie- of trackingcookies van derden.</p>
+  </div>
+
+  <h2>1. Inleiding</h2>
+  <p>Dit cookiebeleid legt uit hoe MJ Consultancy B.V. ("wij", "ons") cookies en vergelijkbare technologie&euml;n gebruikt op de website bundlevue.app. Dit beleid voldoet aan de Nederlandse Telecommunicatiewet en de Algemene Verordening Gegevensbescherming (AVG / GDPR).</p>
+  <p>Dit beleid is van toepassing op de <strong>website</strong> op <a href="https://bundlevue.app">https://bundlevue.app</a>. De BundleVue iOS-app maakt geen gebruik van cookies — voor app-gerelateerde gegevensverwerking verwijzen wij u naar ons <a href="/nl/privacy/">Privacybeleid</a>.</p>
+
+  <h2>2. Wat zijn cookies?</h2>
+  <p>Cookies zijn kleine tekstbestanden die op uw apparaat (computer, tablet of telefoon) worden opgeslagen wanneer u een website bezoekt. Ze helpen de website correct te functioneren, uw voorkeuren te onthouden en informatie te verstrekken aan de website-eigenaar.</p>
+
+  <h2>3. Cookies die wij gebruiken</h2>
+
+  <h3>3.1 Essenti&euml;le cookies (geen toestemming vereist)</h3>
+  <p>Deze cookies zijn strikt noodzakelijk voor het functioneren van de website. Op grond van de Nederlandse Telecommunicatiewet is voor essenti&euml;le cookies geen toestemming vereist.</p>
+  <table>
+    <tr><th>Cookie</th><th>Doel</th><th>Duur</th></tr>
+    <tr><td>Sessiecookies</td><td>Handhaven van websitefunctionaliteit tijdens uw bezoek</td><td>Sessie (verwijderd wanneer u uw browser sluit)</td></tr>
+  </table>
+  <p>Wij beperken essenti&euml;le cookies tot een minimum en gebruiken ze alleen wanneer dit technisch noodzakelijk is.</p>
+
+  <h3>3.2 Niet-essenti&euml;le cookies</h3>
+  <p><strong>Wij gebruiken momenteel geen niet-essenti&euml;le cookies.</strong> Specifiek:</p>
+  <ul>
+    <li><strong>Geen analytische cookies</strong> (geen Google Analytics, geen Matomo, etc.)</li>
+    <li><strong>Geen advertentie- of trackingcookies</strong></li>
+    <li><strong>Geen socialmediacookies</strong></li>
+    <li><strong>Geen marketingcookies van derden</strong></li>
+  </ul>
+  <p>Als wij in de toekomst niet-essenti&euml;le cookies introduceren, zullen wij:</p>
+  <ol>
+    <li>Dit cookiebeleid bijwerken</li>
+    <li>Een cookietoestemmingsbanner implementeren voordat niet-essenti&euml;le cookies worden geplaatst</li>
+    <li>Niet-essenti&euml;le cookies alleen plaatsen nadat u uitdrukkelijke, ge&iuml;nformeerde toestemming hebt gegeven</li>
+  </ol>
+
+  <h2>4. Nieuwsbriefaanmelding</h2>
+  <p>Onze website bevat een aanmeldformulier voor de nieuwsbrief. Wanneer u uw e-mailadres indient:</p>
+  <ul>
+    <li>Verzamelen wij uw e-mailadres op basis van uw <strong>toestemming</strong> (AVG art. 6, lid 1, onder a)</li>
+    <li>U kunt zich op elk moment afmelden via de link in elke nieuwsbrief-e-mail</li>
+    <li>De nieuwsbriefaanmelding zelf kan cookies bevatten die door de formulierprovider worden geplaatst — deze worden alleen met uw toestemming geplaatst als het niet-essenti&euml;le cookies betreft</li>
+  </ul>
+
+  <h2>5. Cookies van derden</h2>
+  <p>Wij laden momenteel geen diensten van derden op onze website die cookies plaatsen. Als dit verandert (bijvoorbeeld als wij video's insluiten, analytics toevoegen of sociale media integreren), zullen wij dit beleid bijwerken en passende toestemmingsmechanismen implementeren.</p>
+
+  <h2>6. Uw toestemming en keuzes</h2>
+
+  <h3>Op grond van de Nederlandse wet (Telecommunicatiewet)</h3>
+  <ul>
+    <li><strong>Essenti&euml;le cookies</strong> mogen zonder toestemming worden geplaatst — ze zijn noodzakelijk voor het functioneren van de website</li>
+    <li><strong>Niet-essenti&euml;le cookies</strong> vereisen uw voorafgaande, ge&iuml;nformeerde toestemming voordat ze geplaatst mogen worden</li>
+    <li>U moet uw toestemming net zo eenvoudig kunnen intrekken als u deze hebt gegeven</li>
+  </ul>
+
+  <h3>Cookies beheren in uw browser</h3>
+  <p>U kunt cookies beheren en verwijderen via uw browserinstellingen. Hieronder vindt u links voor veelgebruikte browsers:</p>
+  <ul>
+    <li><strong>Safari:</strong> <a href="https://support.apple.com/guide/safari/manage-cookies-sfri11471/">https://support.apple.com/guide/safari/manage-cookies-sfri11471/</a></li>
+    <li><strong>Chrome:</strong> <a href="https://support.google.com/chrome/answer/95647">https://support.google.com/chrome/answer/95647</a></li>
+    <li><strong>Firefox:</strong> <a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer">https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer</a></li>
+    <li><strong>Edge:</strong> <a href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09">https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge</a></li>
+  </ul>
+  <p>Houd er rekening mee dat het uitschakelen van essenti&euml;le cookies de functionaliteit van de website kan be&iuml;nvloeden.</p>
+
+  <h2>7. Cookiebanner</h2>
+  <p>Aangezien wij momenteel alleen essenti&euml;le cookies gebruiken, is een cookietoestemmingsbanner niet vereist voor de huidige functionaliteit. Mochten wij in de toekomst niet-essenti&euml;le cookies toevoegen, dan zullen wij een cookiebanner implementeren die:</p>
+  <ul>
+    <li>Duidelijk uitlegt welke cookies worden gebruikt en waarvoor</li>
+    <li>U de mogelijkheid biedt om niet-essenti&euml;le cookies te accepteren of te weigeren voordat ze worden geplaatst</li>
+    <li>U op elk moment de mogelijkheid biedt om uw voorkeuren te wijzigen</li>
+    <li>Geen vooraf aangevinkte selectievakjes gebruikt</li>
+    <li>De toegang tot de website niet blokkeert als u niet-essenti&euml;le cookies weigert</li>
+  </ul>
+
+  <h2>8. Wijzigingen in dit beleid</h2>
+  <p>Wij kunnen dit cookiebeleid van tijd tot tijd bijwerken. Wijzigingen worden weergegeven in de datum "Laatst bijgewerkt" bovenaan deze pagina. Als wij niet-essenti&euml;le cookies gaan gebruiken, zullen wij u hiervan op de hoogte stellen en uw toestemming vragen.</p>
+
+  <h2>9. Contact</h2>
+  <p>Als u vragen hebt over dit cookiebeleid, neem dan contact met ons op:</p>
+  <p><strong>MJ Consultancy B.V.</strong><br>Paganiniplantsoen 14<br>2151 GH Nieuw-Vennep<br>Nederland</p>
+  <p>KvK: 28106352<br>E-mail: <a href="mailto:hello@bundlevue.app">hello@bundlevue.app</a><br>Website: <a href="https://bundlevue.app">https://bundlevue.app</a></p>
+
+  <div class="footer">
+    <p><a href="/nl/">Home</a> &nbsp;/&nbsp; <a href="/nl/privacy/">Privacybeleid</a> &nbsp;/&nbsp; <a href="/nl/cookiebeleid/">Cookiebeleid</a> &nbsp;/&nbsp; <a href="/nl/voorwaarden/">Gebruiksvoorwaarden</a></p>
+    <p>&copy; 2026 MJ Consultancy B.V.</p>
+  </div>
+</div>
+</body>
+</html>

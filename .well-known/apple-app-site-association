@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["C66ZB9KF6C.app.bundlevue.app"],
+        "paths": ["/join/*"]
+      }
+    ]
+  }
+}
