@@ -4,8 +4,10 @@
     "target": {
       "namespace": "android_app",
       "package_name": "app.bundlevue.app",
-      "sha256_cert_fingerprints":
-        ["FF:CD:5B:3F:01:B2:55:D3:CB:2B:69:43:AC:54:BF:47:60:D8:E1:39:7D:A7:B0:4C:02:D4:A0:3C:4F:79:C3:B8"]
+      "sha256_cert_fingerprints": [
+        "F1:02:23:55:17:2D:F2:14:18:3F:00:00:6F:A1:A1:FE:7E:F6:12:F1:01:49:C7:CC:F6:1B:9A:20:44:0F:BF:BB",
+        "FF:CD:5B:3F:01:B2:55:D3:CB:2B:69:43:AC:54:BF:47:60:D8:E1:39:7D:A7:B0:4C:02:D4:A0:3C:4F:79:C3:B8"
+      ]
     }
   }
 ]
