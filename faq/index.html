@@ -140,5 +140,17 @@
     <p class="footer-links"><a href="/">Home</a> &middot; <a href="/faq/">FAQ</a> &middot; <a href="/privacy/">Privacy Policy</a> &middot; <a href="/terms/">Terms of Use</a> &middot; <a href="/privacy/choices/">Privacy Choices</a></p>
   </footer>
 </div>
+<script type="module">
+  import TelemetryDeck from 'https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js';
+  const td = new TelemetryDeck({ app: 'E796600B-5F5B-4FF9-AF94-DC6312F8F637', clientUser: 'anonymous' });
+  const lang = document.documentElement.lang || 'en';
+  td.signal('pageView', { language: lang, page: window.location.pathname });
+  document.querySelectorAll('a[href*="apps.apple.com"]').forEach(el =>
+    el.addEventListener('click', () => td.signal('appStoreClick', { language: lang }))
+  );
+  document.querySelectorAll('a[href*="play.google.com"]').forEach(el =>
+    el.addEventListener('click', () => td.signal('playStoreClick', { language: lang }))
+  );
+</script>
 </body>
 </html>
