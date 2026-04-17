@@ -186,8 +186,8 @@
   </footer>
 </div>
 <script type="module">
-  import TelemetryDeck from 'https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js';
-  const td = new TelemetryDeck({ app: 'E796600B-5F5B-4FF9-AF94-DC6312F8F637', clientUser: 'anonymous' });
+  import TelemetryDeck from 'https://cdn.jsdelivr.net/npm/@telemetrydeck/sdk/dist/telemetrydeck.js';
+  const td = new TelemetryDeck({ appID: 'E796600B-5F5B-4FF9-AF94-DC6312F8F637', clientUser: 'anonymous' });
   const lang = document.documentElement.lang || 'en';
   td.signal('pageView', { language: lang, page: window.location.pathname });
   document.querySelectorAll('a[href*="apps.apple.com"]').forEach(el =>
